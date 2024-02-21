@@ -1,0 +1,41 @@
+<div class="customerView">
+  
+    <div class="customerView__headerLayout">
+        <div class="customerView__header">
+            <div class="customerView__header__imgContainer">
+                <iconify-icon icon="raphael:customer"></iconify-icon>
+            </div>
+            <div class="customerView__header__ShortInfo">
+                <h2 class="customerView__header__ShortInfo__title">
+                    {{customer?.name}}
+                </h2>
+                <h3 class="customerView__header__ShortInfo__phone">
+                    Cell #: {{customer?.phone}}
+                </h3>
+            </div>
+        </div>
+        <div class="customerView__statusBar">
+            <span class="customerView__statusBar__statusTag">
+                {{customer?.status}}
+            </span>
+        </div>
+    </div>
+    <div class="customerView__basicInformation">
+        <div class="customerView__basicInformation__item">
+            <iconify-icon icon="solar:card-broken"></iconify-icon>
+            ID:  {{customer?.id}}
+        </div>
+        <div class="customerView__basicInformation__item">
+            <iconify-icon icon="mdi:rename-box"></iconify-icon>
+            USERNAME: {{customer?.username}}
+        </div>
+        <div class="customerView__basicInformation__item">
+            <iconify-icon icon="medical-icon:registration"></iconify-icon>
+            {{ customer?.registrationDate | date: 'dd-MMM-yyyy'  }}
+        </div>
+        <div class="customerView__basicInformation__item">
+            <iconify-icon icon="ic:outline-email"></iconify-icon>
+            {{customer?.email}}
+        </div>
+    </div>
+</div>

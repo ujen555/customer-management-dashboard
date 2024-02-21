@@ -1,0 +1,33 @@
+.go-back-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 4px;
+    background: #F3F4F8;
+    border-radius: 7px;
+    padding: 6px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #11182A;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        background-color: #fbc404;
+    }
+}
+.headerBar{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    background-color: #fff;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+    border-bottom: 1px solid #eeeff3;
+    transition: all 0.4s ease-in-out;
+}

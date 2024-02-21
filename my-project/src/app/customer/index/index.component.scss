@@ -1,0 +1,140 @@
+.dis{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.AddBtn{
+    background: #06203f;
+    border-radius: 6px;
+    display: block;
+    color: #fff;
+    display: flex;
+    grid-gap: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #ffffff;
+    &:hover{
+        background-color: #fbc404;
+    }
+&:disabled{
+    background-color: #4f5459;
+    &:hover{
+        background-color: #4f5459;
+    }
+}
+transition: all 0.2s ease-in-out;
+
+
+}
+
+.cusomerList__header{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.modal-header{
+    background: #F3F4F8;
+    border: 1px solid #EEEFF3;
+    border-radius: 5px 5px 0 0;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.text-active{
+    display: inline-block;
+    padding: 7PX 25PX;
+    background: #27b884;
+    border: 1px solid #75AF9A;
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
+.text-inactive{
+    display: inline-block;
+    padding: 7PX 25PX;
+    background: #dc3545;
+    border: 1px solid #dc3545;
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    &--no{
+        border-radius: 6px;
+        display: block;
+        color: #fff;
+        display: flex;
+        grid-gap: 5px;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 15px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+        text-transform: capitalize;
+        color: #ffffff;
+    }
+}
+
+.highlight{
+    color: #dc3545;
+}
+.userPanel{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    &__icon{
+        iconify-icon{
+            background-color: #fbc404;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 50%;
+            padding: 6px;
+        }  
+    }
+}
+
+.editBtn{
+    background-color: #06203f;
+    color: #fff;
+}
+
+.text-time{
+    color: #36bad7;
+}
+
+.k-grid td {
+    border-width: 0 !important; 
+}
+
+.modal-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,130 @@
+{
+  "customers": [
+    {
+      "id": "12",
+      "name": "Glenna Lynch",
+      "email": "gune@mailinator.com",
+      "registrationDate": "2020-04-16",
+      "username": "qywave",
+      "phone": "+1 (742) 421-2127",
+      "status": "inactive"
+    },
+    {
+      "id": "14",
+      "name": "Eaton Crane",
+      "email": "rizepijyc@mailinator.com",
+      "registrationDate": "2020-06-17",
+      "username": "tuwef",
+      "phone": "+1 (233) 671-7937",
+      "status": "active"
+    },
+    {
+      "id": "15",
+      "name": "Hayfa Edwards",
+      "email": "jozige@mailinator.com",
+      "registrationDate": "1988-12-17",
+      "username": "gygufar",
+      "phone": "+1 (928) 141-3484",
+      "status": "inactive"
+    },
+    {
+      "id": "155",
+      "name": "Brock Jensen",
+      "email": "bywive@mailinator.com",
+      "registrationDate": "1976-10-10",
+      "username": "qysis",
+      "phone": "+1 (119) 949-4069",
+      "status": "inactive"
+    },
+    {
+      "id": "16",
+      "name": "Keely Chaney",
+      "email": "catuha@mailinator.com",
+      "registrationDate": "1980-06-14",
+      "username": "sizugym",
+      "phone": "+1 (181) 524-4017",
+      "status": "inactive"
+    },
+    {
+      "id": "17",
+      "name": "Ferdinand Small",
+      "email": "gikyz@mailinator.com",
+      "registrationDate": "1974-11-30",
+      "username": "jekudypul",
+      "phone": "+1 (815) 722-8231",
+      "status": "active"
+    },
+    {
+      "id": "18",
+      "name": "Vanna Knox",
+      "email": "qakahos@mailinator.com",
+      "registrationDate": "1986-11-03",
+      "username": "siraguw",
+      "phone": "+1 (682) 385-9423",
+      "status": "inactive"
+    },
+    {
+      "id": "19",
+      "name": "Shelly Carson11",
+      "email": "kigo@mailinator.com",
+      "registrationDate": "2023-12-17",
+      "username": "diwip",
+      "phone": "+1 (301) 465-9937",
+      "status": "inactive"
+    },
+    {
+      "id": "21",
+      "name": "Emma Brady",
+      "email": "ticiza@mailinator.com",
+      "registrationDate": "1997-07-17",
+      "username": "qigijuju",
+      "phone": "+1 (914) 812-1224",
+      "status": "active"
+    },
+    {
+      "id": "22",
+      "name": "Aurelia Pollard",
+      "email": "noganot@mailinator.com",
+      "registrationDate": "2003-12-24",
+      "username": "wapekikal",
+      "phone": "+1 (811) 275-7424",
+      "status": "active"
+    },
+    {
+      "id": "34",
+      "name": "Carl Mosley",
+      "email": "qativ@mailinator.com",
+      "registrationDate": "2017-01-24",
+      "username": "reximyrih",
+      "phone": "+1 (969) 282-5759",
+      "status": "active"
+    },
+    {
+      "id": "64",
+      "name": "Taylor Brennan",
+      "email": "lugyfag@mailinator.com",
+      "registrationDate": "2015-10-07",
+      "username": "wekap",
+      "phone": "+1 (142) 541-3525",
+      "status": "active"
+    },
+    {
+      "id": "3466",
+      "name": "John Lyonssss",
+      "email": "nuqajuk@mailinator.com",
+      "registrationDate": "1975-10-17",
+      "username": "dewagyjuhi",
+      "phone": "+1 (962) 257-6394",
+      "status": "inactive"
+    },
+    {
+      "id": "123",
+      "name": "Indigo Weiss",
+      "email": "bilok@mailinator.com",
+      "registrationDate": "1991-12-28",
+      "username": "mywuriz",
+      "phone": "+1 (315) 199-3128",
+      "status": "inactive"
+    }
+  ]
+}

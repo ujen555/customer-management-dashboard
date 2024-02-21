@@ -1,0 +1,188 @@
+<div class="cusomerList container">
+  <!-- Button trigger modal -->
+  <div class="cusomerList__header">
+    <h3>Customers</h3>
+    <button
+      type="button"
+      class="AddBtn"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      (click)="openAddMOdal()"
+    >
+      Add Customer
+    </button>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            {{ customerFormTitle }}
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="form" (ngSubmit)="submit()">
+            <formly-form
+              [fields]="fields"
+              [form]="form"
+              [model]="model"
+            ></formly-form>
+            <button
+              type="submit"
+              [disabled]="form.invalid"
+              data-bs-dismiss="modal"
+              class="AddBtn mx-auto"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <kendo-grid [kendoGridBinding]="gridData" [pageSize]="pageSize" [pageable]="true" [sortable]="true"    [filterable]="true" >
+    <kendo-grid-column
+      field="id"
+      title="ID"
+      [headerStyle]="{ 'background-color': '#fff' ,
+    'border':'none'
+    }"
+    >
+    </kendo-grid-column>
+    <kendo-grid-column field="name" title="Customer Name"      [headerStyle]="{ 'background-color': '#fff' ,
+    'border':'none'
+    }">
+      <ng-template kendoGridCellTemplate let-dataItem>
+        <div class="userPanel">
+          <div class="userPanel__icon">
+            <iconify-icon icon="raphael:customer"></iconify-icon>
+          </div>
+          <div div class="userPanel__content">
+            <div class="userPanel__content__item">
+              {{ dataItem.name }}
+            </div>
+            <div
+              class="userPanel__content__item userPanel__content__item--light"
+            >
+              {{ dataItem.phone }}
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </kendo-grid-column >
+    <kendo-grid-column field="email" title="Email"      [headerStyle]="{ 'background-color': '#fff' ,
+    'border':'none'
+    }"> </kendo-grid-column>
+    <kendo-grid-column field="registrationDate" title="Registration Date"      [headerStyle]="{ 'background-color': '#fff' ,
+    'border':'none'
+    }">
+      <ng-template kendoGridCellTemplate let-dataItem>
+        <div>
+          {{ dataItem.registrationDate }}
+        </div>
+        <div class="text-time">
+          {{ dataItem.registrationDate | date : "shortTime" }}
+        </div>
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column field="status" title="Status"      [headerStyle]="{ 'background-color': '#fff' ,
+    'border':'none'
+    }">
+      <ng-template kendoGridCellTemplate let-dataItem>
+        <div>
+          <div
+            [ngClass]="{'text-active':dataItem.status.toLowerCase()==='active','text-inactive':dataItem.status.toLowerCase()!=='active',}"
+            style="margin: 0 auto"
+          >
+            {{ dataItem.status }}
+          </div>
+        </div>
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-command-column
+      title="Action"
+      [headerStyle]="{ 'background-color': '#fff' ,
+      'border':'none'
+      }"
+    >
+      <ng-template
+        kendoGridCellTemplate
+        let-isNew="isNew"
+        let-dataItem="dataItem"
+      >
+        <ng-container>
+          <div class="dis">
+            <button
+              tooltip="View"
+              class="btn btn-success btn-sm mr-1"
+              data-toggle="modal"
+              (click)="navigateToView(dataItem.id)"
+            >
+              <iconify-icon icon="carbon:view"></iconify-icon>
+            </button>
+
+            <button
+              tooltip="Edit"
+              class="editBtn btn  btn-sm mr-1"
+              data-toggle="modal"
+              (click)="openEditModal(dataItem)"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <iconify-icon icon="iconamoon:edit-light"></iconify-icon>
+            </button>
+            <button
+              tooltip="Delete"
+              class="btn btn-danger btn-sm"
+
+              data-toggle="modal"
+              data-bs-toggle="modal"
+              data-bs-target="#deleteModal"
+              (click)="openDeleteModal(dataItem)"
+            >
+           
+              <iconify-icon
+                icon="material-symbols:delete-outline"
+              ></iconify-icon>
+            </button>
+          </div>
+        </ng-container>
+      </ng-template>
+    </kendo-grid-command-column>
+  </kendo-grid>
+</div>
+
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        Delete {{toBeDeleteItem?.name}}
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete Customer <span  class="highlight">{{toBeDeleteItem?.name}}</span> having ID <span class="highlight">{{toBeDeleteItem?.id}}</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="AddBtn" data-bs-dismiss="modal" (click)="deleteCustomer(toBeDeleteItem?.id)">Yes</button>
+        <button type="button" class="text-inactive text-inactive--no" data-bs-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>

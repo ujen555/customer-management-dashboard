@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+.toast-container {
+    position: fixed;
+    z-index: 9999;
+    top: 20px;
+    right: 20px;
+  }
+  
+  /* Style the toast */
+  .toast {
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    padding: 15px;
+  }
+  
+  /* Style the toast title */
+  .toast-title {
+    font-weight: bold;
+  }
+  
+  /* Style the success toast */
+  .toast-success {
+    background-color: #28a745;
+ padding: 10px 20px;
+ border-radius: 10px;
+ color: #fff;
+
+  }
+  
+  /* Style the error toast */
+  .toast-error {
+    background-color: #dc3545;
+  }
+  
+  /* Style the info toast */
+  .toast-info {
+    background-color: #17a2b8;
+  }
+  
+  /* Style the warning toast */
+  .toast-warning {
+    background-color: #ffc107;
+  }
